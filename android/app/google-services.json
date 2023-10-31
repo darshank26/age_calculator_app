@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "277517795579",
+    "project_id": "age-calculator-2570f",
+    "storage_bucket": "age-calculator-2570f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277517795579:android:ca6af95e29343a146bb05e",
+        "android_client_info": {
+          "package_name": "com.darshankomu.age_calculator_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNCkITeFBVxewfhDLbwCNdmnR75Q6fqxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
