@@ -32,7 +32,6 @@ class SliderView extends StatelessWidget {
             Menu(Icons.share, 'Share'),
             Menu(Icons.star_rate, 'Rate Us'),
             Menu(Icons.apps, 'More Apps'),
-            Menu(Icons.settings, 'Setting'),
           ]
               .map((menu) => _SliderMenuItem(
               title: menu.title,

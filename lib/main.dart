@@ -31,35 +31,35 @@ Future<void> loadAd() async {
 }
 
 
-void showAd()
-{
-  if(openAd == null)
-  {
-    print('trying to show before loading');
-    loadAd();
-    return;
-  }
-  openAd!.fullScreenContentCallback = FullScreenContentCallback(
-      onAdShowedFullScreenContent: (ad) {
-        print('onAdShowedFullScreenContent');
-      },
-      onAdFailedToShowFullScreenContent: (ad,error)
-      {
-        ad.dispose();
-        print('failed to load $error');
-        openAd = null;
-        loadAd();
-      },
-      onAdDismissedFullScreenContent: (ad)
-      {
-        ad.dispose();
-        print('onAdWillDismissFullScreenContent');
-        openAd = null;
-        loadAd();
-      }
-  );
-  openAd!.show();
-}
+// void showAd()
+// {
+//   if(openAd == null)
+//   {
+//     print('trying to show before loading');
+//     loadAd();
+//     return;
+//   }
+//   openAd!.fullScreenContentCallback = FullScreenContentCallback(
+//       onAdShowedFullScreenContent: (ad) {
+//         print('onAdShowedFullScreenContent');
+//       },
+//       onAdFailedToShowFullScreenContent: (ad,error)
+//       {
+//         ad.dispose();
+//         print('failed to load $error');
+//         openAd = null;
+//         loadAd();
+//       },
+//       onAdDismissedFullScreenContent: (ad)
+//       {
+//         ad.dispose();
+//         print('onAdWillDismissFullScreenContent');
+//         openAd = null;
+//         loadAd();
+//       }
+//   );
+//   openAd!.show();
+// }
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -69,8 +69,9 @@ Future<void> main() async {
 
   MobileAds.instance.initialize();
 
-  // await loadAd();
+  // showAd();
 
+  // loadAd();
 }
 
 class MyApp extends StatefulWidget {
@@ -96,6 +97,8 @@ class _MyAppState extends State<MyApp> {
     initPlatformState();
     _handleConsent();
     // _handleSendNotification();
+    // showAd();
+
 
   }
 
